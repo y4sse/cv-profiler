@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Personal profile, claims, generated CVs, saved JDs, and interview logs
+profile.yaml
+claims/*
+!claims/example.yaml
+out/*.pdf
+jobs/*
+!jobs/.gitkeep
+sessions/*
+!sessions/.gitkeep

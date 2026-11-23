@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cv-profiler"
+version = "1.0.0"
+description = "Personal CLI to generate tailored, honest, ATS-friendly CVs from verified claims and job descriptions."
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic>=2.0",
+  "PyYAML>=6.0",
+]
+
+[project.scripts]
+cv = "cv_profiler:main"
+cv-profiler = "cv_profiler:main"
+
+[tool.setuptools]
+py-modules = ["cv_profiler", "llm_grill"]

@@ -1,0 +1,85 @@
+service_desk:
+  - "service desk"
+  - "help desk"
+  - "n1"
+  - "n2"
+  - "2n"
+  - "segundo nivel"
+  - "suporte"
+  - "suporte tecnico"
+qa_testes:
+  - "qa"
+  - "quality assurance"
+  - "testes funcionais"
+  - "testes regressivos"
+  - "testes exploratorios"
+  - "qualidade de software"
+microsoft_365:
+  - "microsoft 365"
+  - "office 365"
+  - "office365"
+  - "m365"
+excel_planilhas:
+  - "excel"
+  - "google sheets"
+  - "planilhas"
+  - "google workspace"
+  - "pacote office"
+  - "microsoft office"
+active_directory:
+  - "active directory"
+  - "ad"
+redes:
+  - "redes"
+  - "rede"
+monitoramento:
+  - "monitoramento"
+  - "zabbix"
+  - "grafana"
+itil:
+  - "itil"
+  - "itil v3"
+  - "itil v4"
+windows:
+  - "windows"
+  - "windows server"
+linux:
+  - "linux"
+  - "linux server"
+python:
+  - "python"
+sql:
+  - "sql"
+sap:
+  - "sap"
+  - "sap erp"
+  - "sap pm"
+  - "sap mm"
+  - "sap fico"
+  - "sap qm"
+azure:
+  - "azure"
+  - "microsoft azure"
+ingles:
+  - "ingles"
+  - "english"
+  - "ingles avancado"
+  - "ingles intermediario"
+documentacao_treinamento:
+  - "pop"
+  - "pops"
+  - "procedimento operacional padrao"
+  - "treinamento"
+  - "treinamentos"
+  - "seguranca da informacao"
+rotinas_administrativas_financeiras:
+  - "rotinas administrativas"
+  - "analise orcamentaria"
+  - "contas a pagar"
+  - "contas a receber"
+financas_fiscal:
+  - "escrita fiscal"
+  - "analise financeira"
+  - "icms"
+  - "iss"
+  - "ipi"

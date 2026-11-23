@@ -1,0 +1,48 @@
+claims:
+  - id: service_desk
+    status: verified
+    category: profissional
+    level: solido
+    evidence:
+      kind: producao_autonoma
+      context: "Empresa Exemplo — Estágio em Suporte Técnico (2025 – atual)"
+      concrete: "Atendimento N1 a usuários, registro de chamados com SLA e diagnóstico de incidentes"
+      artifact: null
+    tags: [service_desk]
+    bullets:
+      - "Atendimento técnico a usuários (N1), com registro, categorização e resolução de chamados."
+      - "Diagnóstico e resolução de incidentes com rastreabilidade e foco em SLA."
+
+  - id: python
+    status: verified
+    category: profissional
+    level: pratica
+    evidence:
+      kind: producao_supervisionada
+      context: "Empresa Exemplo — Projetos de Automação Interna (2025)"
+      concrete: "Desenvolvimento de scripts Python para validação e conciliação de planilhas operacionais"
+      artifact: null
+    tags: [python, automacao]
+    bullets:
+      - "Automação de validação e conciliação de dados operacionais por meio de scripts Python."
+
+  - id: engenharia_software
+    status: verified
+    category: academico
+    level: nocoes
+    evidence:
+      kind: estudo
+      context: "Universidade Exemplo — Bacharelado em Engenharia de Software"
+      concrete: "Disciplinas de lógica computacional, estruturas de dados e qualidade de software"
+      artifact: null
+    tags: [engenharia_software]
+    bullets:
+      - "Formação em lógica computacional, estruturas de dados e qualidade de software."
+
+  - id: linux
+    status: absent
+    category: profissional
+    level: null
+    evidence: null
+    tags: [linux]
+    bullets: []

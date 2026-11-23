@@ -1,0 +1,57 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[top=1.6cm,bottom=1.6cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+
+\setmainfont[Ligatures=NoCommon]{Liberation Sans}
+\linespread{1.12}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\pagestyle{empty}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{7pt}%
+  {\large\bfseries\MakeUppercase{#1}}\\[-3pt]%
+  \noindent\rule{\linewidth}{0.5pt}\par
+  \vspace{2pt}%
+}
+
+\newcommand{\cvskill}[3]{%
+  \vspace{3pt}%
+  \textbf{#1} --- \textit{#2} \textbar\ {\small #3}\par
+  \vspace{-2pt}%
+}
+
+\newenvironment{cvlist}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.3em}%
+    \setlength{\itemsep}{2pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{2pt}%
+    \setlength{\partopsep}{0pt}%
+  }%
+}{\end{list}}
+
+\begin{document}
+
+{\LARGE\bfseries %NAME%}\par
+\vspace{1pt}
+{\normalsize %ROLE%}\par
+\vspace{2pt}
+{\small %LOCATION%\ \textbar\ \href{mailto:%EMAIL_RAW%}{%EMAIL%}\ \textbar\ %PHONE%\ \textbar\ \href{https://%LINKEDIN_RAW%}{%LINKEDIN%}\ \textbar\ \href{https://%GITHUB_RAW%}{%GITHUB%}}\par
+\vspace{-2pt}
+\noindent\rule{\linewidth}{0.8pt}\par
+
+\cvsection{Resumo Profissional}
+%RESUMO%
+
+\cvsection{Competências Técnicas}
+%COMPETENCIAS%
+
+\cvsection{Formação Acadêmica}
+%FORMACAO%
+
+\cvsection{Experiência Profissional}
+%EXPERIENCIA%
+
+\end{document}
