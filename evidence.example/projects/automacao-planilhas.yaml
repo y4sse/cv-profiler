@@ -1,0 +1,14 @@
+id: automacao-planilhas
+name: Automação de Relatórios Operacionais
+role: Projeto Pessoal
+date: "2025-08"
+url: github.com/seu-usuario/automacao-planilhas
+evidence_kind: projeto
+artifacts: []
+skill_levels:
+  python: pratica
+  excel_planilhas: pratica
+bullets:
+  - text: "Scripts Python para validação e consolidação automática de planilhas CSV/Excel com logs de auditoria."
+    skills: [python, excel_planilhas]
+    core: true

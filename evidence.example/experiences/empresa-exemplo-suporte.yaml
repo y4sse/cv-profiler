@@ -1,0 +1,21 @@
+id: empresa-exemplo-suporte
+org: Empresa Exemplo
+role: Estágio em Suporte Técnico de TI
+location: Cidade – UF
+start: "2025-01"
+end: null
+evidence_kind: producao_autonoma
+artifacts: []
+skill_levels:
+  service_desk: solido
+  python: pratica
+bullets:
+  - text: "Atendimento técnico a usuários (N1), com registro, categorização e resolução de chamados seguindo SLA."
+    skills: [service_desk]
+    core: true
+  - text: "Diagnóstico e resolução de incidentes com rastreabilidade e documentação de procedimentos internos."
+    skills: [service_desk, documentacao_treinamento]
+    core: true
+  - text: "Automação de validação e conciliação de planilhas operacionais com scripts Python."
+    skills: [python]
+    core: false

@@ -1,0 +1,11 @@
+id: cert-exemplo
+title: Certificado Exemplo de Inglês — B2/C1
+issuer: Instituição Exemplo
+date: "2025-06"
+detail: "Leitura técnica e comunicação profissional"
+url: cert.exemplo.org/12345
+artifact: null
+evidence_kind: producao_autonoma
+skills: [ingles]
+skill_levels:
+  ingles: pratica

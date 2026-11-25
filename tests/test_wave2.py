@@ -29,7 +29,7 @@ class TestJobStorageAndIngest(unittest.TestCase):
                 company="Acme",
                 jobs_dir=jobs_dir,
             )
-            self.assertEqual(job_dir, jobs_dir / "2026-11_acme_suporte")
+            self.assertEqual(job_dir, jobs_dir / "ingested" / "2026-11_acme_suporte")
             self.assertTrue((job_dir / "jd.txt").exists())
             self.assertTrue((job_dir / "job.yaml").exists())
             self.assertEqual(meta.company, "Acme")
@@ -47,9 +47,9 @@ class TestJobStorageAndIngest(unittest.TestCase):
             root = Path(td)
             sample_pdf = cp.render(
                 resumo="Vaga de Suporte Tecnico N1 com Python.",
-                competencias=cp.compose_competencias(cp.load_claims(cp.CLAIMS_EXAMPLE)),
-                formacao="Bacharelado em Engenharia de Software.",
-                experiencia="Estagio de Suporte TI.",
+                experiencia=cp.format_latex_block("Estagio de Suporte TI."),
+                formacao=cp.format_latex_block("Bacharelado em Engenharia de Software."),
+                habilidades=cp.compose_habilidades(cp.load_claims(cp.CLAIMS_EXAMPLE), set(), {}),
             )
             jobs_dir = root / "jobs"
             job_dir, meta, text = cp.ingest_job(
@@ -59,13 +59,13 @@ class TestJobStorageAndIngest(unittest.TestCase):
             )
             self.assertTrue((job_dir / "jd.pdf").exists())
             self.assertTrue((job_dir / "jd.txt").exists())
-            self.assertIn("COMPETÊNCIAS", text)
+            self.assertIn("HABILIDADES", text)
 
             # Delete jd.txt and confirm load_job re-extracts from jd.pdf automatically
             (job_dir / "jd.txt").unlink()
             slug, refreshed, _ = cp.load_job("2026-11_pdf_test", jobs_dir=jobs_dir)
             self.assertEqual(slug, "2026-11_pdf_test")
-            self.assertIn("COMPETÊNCIAS", refreshed)
+            self.assertIn("HABILIDADES", refreshed)
             self.assertTrue((job_dir / "jd.txt").exists())
 
 

@@ -5,8 +5,10 @@ __pycache__/
 dist/
 build/
 
-# Personal profile, claims, generated CVs, saved JDs, and interview logs
+# Personal profile, evidence, legacy claims, generated CVs, saved JDs, and interview logs
 profile.yaml
+evidence/*
+!evidence/.gitkeep
 claims/*
 !claims/example.yaml
 out/*.pdf

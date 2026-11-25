@@ -1,0 +1,12 @@
+id: universidade-exemplo
+institution: Universidade Exemplo
+degree: Bacharelado em Engenharia de Software
+start: "2024-02"
+end: "2028-12"
+evidence_kind: estudo
+skills: [engenharia_software]
+skill_levels:
+  engenharia_software: nocoes
+highlights:
+  - text: "Base em algoritmos, estruturas de dados, qualidade de software e arquitetura de sistemas."
+    skills: [engenharia_software, qa_testes]

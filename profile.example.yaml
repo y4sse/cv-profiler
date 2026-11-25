@@ -4,15 +4,8 @@ email: voce@exemplo.com
 phone: (00) 00000-0000
 linkedin: linkedin.com/in/seu-perfil
 github: github.com/seu-usuario
-claims_file: claims/example.yaml
+evidence_dir: evidence.example
 role: Engenharia de Software | Suporte Técnico e TI
 resumo: >-
   Graduando em Engenharia de Software com experiência prática em suporte técnico,
   resolução de incidentes e automação de rotinas.
-formacao: |
-  Bacharelado em Engenharia de Software — Universidade Exemplo | 2024 – 2028
-  - Base em algoritmos, estruturas de dados, qualidade de software e arquitetura de sistemas.
-experiencia: |
-  Empresa Exemplo — Estágio em Suporte Técnico de TI | 2025 – atual
-  - Atendimento N1 a usuários, registro e resolução de chamados seguindo SLA.
-  - Apoio na investigação de incidentes e documentação de procedimentos internos.

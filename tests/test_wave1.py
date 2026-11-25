@@ -274,27 +274,30 @@ class TestLatexEscapingAndEndToEnd(unittest.TestCase):
                 ]
             )
         )
-        comp = cp.compose_competencias([tricky])
+        hab = cp.compose_habilidades([tricky], {"sql"}, cp.load_aliases())
+        exp_tex = cp.format_latex_block(
+            "Estagio TI & Suporte\n- " + tricky.bullets[0]
+        )
         pdf = cp.render(
             resumo="Suporte N1 & N2 (100% remoto) com foco em QA_TI.",
-            competencias=comp,
-            formacao="Engenharia de Software (Universidade Exemplo) #1",
-            experiencia="Estagio TI & Suporte",
+            experiencia=exp_tex,
+            formacao=cp.format_latex_block("Engenharia de Software (Universidade Exemplo) #1"),
+            habilidades=hab,
         )
         self.assertTrue(pdf.exists())
         self.assertEqual(cp.ats_checks(pdf, allow_two_pages=False), [])
-        # Verify human-readable formatted output (accents, structured headings, no raw YAML debug text)
+        # Verify human-readable formatted output (accents, structured headings, no proficiency levels in Habilidades)
         import subprocess
         extracted = subprocess.run(
             ["pdftotext", "-layout", str(pdf), "-"],
             capture_output=True,
             text=True,
         ).stdout
-        self.assertIn("COMPETÊNCIAS TÉCNICAS", extracted)
+        self.assertIn("HABILIDADES", extracted)
         self.assertIn("FORMAÇÃO ACADÊMICA", extracted)
         self.assertIn("EXPERIÊNCIA PROFISSIONAL", extracted)
         self.assertIn("SQL e Bancos de Dados", extracted)
-        self.assertIn("Prática", extracted)
+        self.assertNotIn("Prática", extracted)
         self.assertNotIn("| nivel ", extracted)
         self.assertNotIn("| evidencia:", extracted)
 
